@@ -7,5 +7,17 @@
 }
 
 .assignments {
-    
+    float: right;
+}
+
+.assignmentsUl {
+    margin: 0 0 0 32px;
+    line-height: 1 5;
+}
+
+.b1 {
+    list-style: none;
+
+    list-style-image: url(https://cdn.discordapp.com/attachments/314593256954658816/1181427203502776320/pngtree-book-clipart-vector-png-image_6653535_2_40x37.png?ex=658104d3&is=656e8fd3&hm=f81fc7ddc9e0a1fc245cc478e88ab1e5a0edc507054c1a4275402bba7eefed67&);
+
 }
