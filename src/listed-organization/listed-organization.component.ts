@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
-  selector: 'app-listed-courses',
+  selector: 'app-listed-organization',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './listed-courses.component.html',
-  styleUrl: './listed-courses.component.css'
+  templateUrl: './listed-organization.component.html',
+  styleUrl: './listed-organization.component.css'
 })
-export class ListedCoursesComponent {
+export class ListedOrganizationComponent {
   isVisible = false;
 
   toggleVisibility() {
     this.isVisible = !this.isVisible;
+    
 }
+
 turnOff() {
   this.isVisible = false;
 }

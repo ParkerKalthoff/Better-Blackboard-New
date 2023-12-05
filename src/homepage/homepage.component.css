@@ -1,4 +1,11 @@
 .card {
     margin-top: 0.5%;
+    box-shadow: -3px 3px  #333;
+    border-color: #333;
+    border-width: 3px;
+    background-color: rgb(255, 237, 191);
+}
+
+.assignments {
     
 }

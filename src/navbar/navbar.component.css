@@ -1,10 +1,4 @@
-#show {
-    display: none;
-  }
-  
-  #show.visible {
-    display: block;
-  }
+
 
 .NDSUnav {
     background-color: #457344;
@@ -39,6 +33,7 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a div li:hover{
     text-decoration: none;
+    color: rgb(160, 122, 26);
 }
