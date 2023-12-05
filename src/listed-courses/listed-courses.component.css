@@ -1,0 +1,39 @@
+.courses {
+    background-color: #395d38;
+    height: auto;
+    width: auto;
+    padding: 2.5%;
+    color: #333;
+}
+
+.courses img {
+    border-bottom-color: #333;
+    border-bottom-width: 3px;
+}
+
+.outside {
+    position: fixed;
+    z-index: 1600;
+    top: 0;
+    left: 0;
+    margin-top: 4.01%;
+    margin-left: 15%;
+    width: 70%;
+    background-color: #395d38; 
+    padding-top: -10%;
+    padding: 0.4%;
+    z-index: 1000;
+    box-shadow: -3px 3px  #333;
+    border-color: #333;
+    border-width: 30px;
+}
+
+.card {
+    margin-top : 0.5%;
+    margin-left: 2.5%;
+    background-color: rgb(255, 255, 255);
+    border-color: #333;
+    border-width: 3px;
+    float: left;
+    box-shadow: -3px 3px  #333;
+}

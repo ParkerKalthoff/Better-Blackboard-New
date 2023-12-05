@@ -1,0 +1,44 @@
+#show {
+    display: none;
+  }
+  
+  #show.visible {
+    display: block;
+  }
+
+.NDSUnav {
+    background-color: #457344;
+    padding-left: 0.75%;
+}
+
+.NDSU-brand {
+    font: 2em times;
+    color: goldenrod;
+}
+
+.NDSU-brand:hover {
+    color: rgb(156, 118, 22);
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-button {
+    background-color: #457344;
+    border: none;
+    transition: background-color 0.25s ease;
+    color: goldenrod;
+    font: 1.5em times;
+    padding: 0.2em;
+    border-radius: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
