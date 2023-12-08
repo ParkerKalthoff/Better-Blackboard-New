@@ -1,1 +1,103 @@
-<p>organizations works!</p>
+<div *ngIf="orgID !== null">
+    <div style="float: left">
+        <div class="card" style="width: 45rem; margin-bottom: -2%">
+            <h2>
+                <button (click)="announcementsActive = true" class="myBtn btn btn-primary"
+                    [style.background-color]="!announcementsActive ? '#457344' : '#2d4c2d'"><b>Announcements</b></button>
+                <button (click)="announcementsActive = false" class="myBtn btn btn-primary"
+                    [style.background-color]="announcementsActive ? '#457344' : '#2d4c2d'"><b>Organization
+                        Materials</b></button>
+            </h2>
+        </div>
+        <div *ngIf="announcementsActive">
+            <div class="card" style="width: 45rem;">
+                <h2 style="margin-left: 23%">{{ orgName }} Announcements</h2>
+            </div>
+
+            <div class="card" style="width: 45rem;">
+                <div class="card-body">
+                    <div style="float:left">
+                        <img style="border-radius: 10px;"
+                            src="https://cdn.discordapp.com/attachments/314593256954658816/1181396575956783134/default-avatar-photo-placeholder-profile-picture-vector-21806614.png?ex=6580e84c&is=656e734c&hm=38be412cd6a65da9e449e1f624bfd4bb4c5a4587a9a398e87b0e89f3e9043944&"
+                            alt="Teacher pic" width="75" height="75">
+                    </div>
+                    <div style="margin-left: 17%">
+                        <h5 class="card-title">{{ orgFacAdvisor }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">3/1/2023 12:01 pm</h6>
+                        <p class="card-text">Reminder: Field trip to the natural history museum this Saturday. Bring
+                            your curiosity and questions - it's going to be a blast!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 45rem;">
+                <div class="card-body">
+                    <div style="float:left">
+                        <img style="border-radius: 10px;"
+                            src="https://cdn.discordapp.com/attachments/314593256954658816/1181396575956783134/default-avatar-photo-placeholder-profile-picture-vector-21806614.png?ex=6580e84c&is=656e734c&hm=38be412cd6a65da9e449e1f624bfd4bb4c5a4587a9a398e87b0e89f3e9043944&"
+                            alt="Teacher pic" width="75" height="75">
+                    </div>
+                    <div style="margin-left: 17%">
+                        <h5 class="card-title">{{ orgFacAdvisor }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2/23/2023 5:03 pm</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, facere
+                            corporis. Nobis blanditiis, ipsum numquam atque, maiores autem voluptatem magnam,
+                            repudiandae hic neque dicta quo at quasi molestias suscipit! Beatae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!announcementsActive">
+        <div class="card" style="width: 45rem;">
+            <h2 style="margin-left: 30%">{{ orgName }} Materials</h2>
+        </div>
+        <div class="card" style="width: 45rem;">
+            <ul class="assignmentsUl">
+                <h5 style="margin-left: 28%; margin-top: 3%;"><b>Organization Texts</b></h5>
+                <br>
+                <li class="b2">
+                    <div class="assinSpecifc">
+                        <h3>Org Textbook</h3>
+                    </div>
+                </li>
+                <br>
+                <li class="b2">
+                    <div class="assinSpecifc">
+                        <h3>Org Textbook</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="assignments" [style.margin-top]="announcementsActive ? '0%' : '-22.3%'">
+    <div>
+        <div class="card" style="width: 30rem;">
+            <h2 style="margin-left: 15%">Upcoming Meetings</h2>
+        </div>
+
+        <div class="card">
+            <ul class="assignmentsUl">
+                <h5 style="margin-left: 33%; margin-top: 3%;">3/2/2023</h5>
+                <br>
+
+                <li class="b1">
+                    <div class="assinSpecifc">
+                        <h3>Club Meeting</h3>
+                    </div>
+                </li>
+
+                <hr style="width:85%;">
+                <h5 style="margin-left: 33%; margin-top: 3%;">3/9/2023</h5>
+                <br>
+
+                <li class="b1">
+                    <div class="assinSpecifc">
+                        <h3>Club Meeting</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

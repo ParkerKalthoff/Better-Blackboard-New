@@ -1,1 +1,12 @@
-<p>grades works!</p>
+<div class="card" style="width: 74rem; margin-left: 6%">
+    <h2 style="margin-left: 40%">{{ courseName }} Grades</h2>
+</div>
+
+<div class="card" style="width: 74rem; margin-left: 6%; padding: 3%;">
+    <div *ngFor="let assignment of assignmentsArray">
+        <h6>{{ assignment.name }} Grade: {{assignment.grade}} / {{assignment.total}}</h6>
+        <br>
+    </div>
+    <br>
+    <h4> Average Grade : {{ averageGrade() }}</h4>
+</div>

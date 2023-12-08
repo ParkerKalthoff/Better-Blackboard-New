@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { SubmitButtonComponent } from '../submit-button/submit-button.component';
 
+import { Title } from '@angular/platform-browser';
+
+
 @Component({
   selector: 'app-assignment-submit',
   standalone: true,
@@ -13,7 +16,7 @@ import { SubmitButtonComponent } from '../submit-button/submit-button.component'
 
 
 export class AssignmentSubmitComponent implements OnInit{
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private titleService: Title) { }
 
   isButtonDisabled: boolean = false;
   buttonText: string = "Submit Assignment"
@@ -77,6 +80,12 @@ export class AssignmentSubmitComponent implements OnInit{
         this.AssignName = this.tasks[courseIdNumber - 1]?.title;
         this.AssignDate = this.tasks[courseIdNumber - 1]?.dueDate;
       }
+      if(this.AssignID !== null)
+      this.setTitle("Submission - "+this.AssignName);
+    }
+
+    setTitle(newTitle: string) {
+      this.titleService.setTitle(newTitle);
     }
   }
 

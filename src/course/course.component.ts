@@ -61,7 +61,7 @@ export class CourseComponent implements OnInit{
     }
 
     if(this.courseName !== null)
-    this.setTitle(this.courseName);
+    this.setTitle("NDSU - " + this.courseName);
   }
 
   setTitle(newTitle: string) {
