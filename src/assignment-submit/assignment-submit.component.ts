@@ -14,9 +14,12 @@ import { SubmitButtonComponent } from '../submit-button/submit-button.component'
 
 export class AssignmentSubmitComponent implements OnInit{
   constructor(private route: ActivatedRoute) { }
-  
-  
-  AssignID: string | null = "1";
+
+  isButtonDisabled: boolean = false;
+  buttonText: string = "Submit Assignment"
+  submissionTime: string = "Assignment Recieved at: ";
+  successfulSubmission: boolean = false;
+  AssignID:   string | null = "1";
   AssignName: string | null = null;
   AssignDate: string | null = null;
 
@@ -60,6 +63,10 @@ export class AssignmentSubmitComponent implements OnInit{
 
   submission(){
     window.alert("Assignment Recieved at: " + Date() + "\n\nEmail Confirmation Sent");
+    this.successfulSubmission = true;
+    this.submissionTime = "Assignment Recieved at: " + Date();
+    this.buttonText = "Assignment Submitted";
+    this.isButtonDisabled = true;
   }
 
     ngOnInit() {

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomepageComponent } from '../homepage/homepage.component';
 import { CourseComponent } from '../course/course.component';
 import { AssignmentSubmitComponent } from '../assignment-submit/assignment-submit.component';
+import { OrganizationsComponent } from '../organizations/organizations.component';
 
 
 export const routes: Routes = 
@@ -10,4 +11,5 @@ export const routes: Routes =
     { path: 'home', component: HomepageComponent },
     { path: 'course/:course-id', component: CourseComponent },
     { path: 'assignment_submit/:id', component: AssignmentSubmitComponent },
+    { path: 'organizations/:organization-id', component: OrganizationsComponent },
 ];

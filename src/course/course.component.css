@@ -6,6 +6,15 @@
     background-color: rgb(255, 237, 191);
 }
 
+.myBtn {
+    background-color: #457344;
+    border-color: #333;
+    color: goldenrod;
+    width: 50%;
+    height:max-content;
+    min-height: 50px;
+}
+
 .assignments {
     float: right;
 }
@@ -20,6 +29,12 @@
 
     list-style-image: url(https://cdn.discordapp.com/attachments/314593256954658816/1181426978960707594/pngtree-book-clipart-vector-png-image_6653535_25x22.png?ex=6581049d&is=656e8f9d&hm=8ee8602a8982a78b286f2f8b815f6cefa4851f30a001dcd899eacd2e5aeb07af&);
 
+}
+
+.b2 {
+list-style: none;
+
+    list-style-image: url(https://cdn.discordapp.com/attachments/314593256954658816/1182591956392628235/663341_25x25.png?ex=65854195&is=6572cc95&hm=94f9902131b13bfe966b220300f0a7d44ae22de1c6430235ba0905b5ca1db5e3&);
 }
 
 .assinSpecifc {

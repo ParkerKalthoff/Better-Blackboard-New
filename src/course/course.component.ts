@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-course',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './course.component.css'
 })
 export class CourseComponent implements OnInit{
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private titleService: Title) { }
 
   classes: Classes[] = [
     {
@@ -46,8 +47,9 @@ export class CourseComponent implements OnInit{
   ];
   
   courseId: string | null = "1";
-  courseName: string | null = null;
+  courseName: string | null = "courseName";
   courseProfessor: string | null = null;
+  announcementsActive: boolean = true;
 
   ngOnInit() {
     console.warn("Course id is:" + this.route.snapshot.paramMap.get('course-id'));
@@ -57,6 +59,13 @@ export class CourseComponent implements OnInit{
       this.courseName = this.classes[courseIdNumber - 1]?.className;
       this.courseProfessor = this.classes[courseIdNumber - 1]?.name;
     }
+
+    if(this.courseName !== null)
+    this.setTitle(this.courseName);
+  }
+
+  setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
 }
